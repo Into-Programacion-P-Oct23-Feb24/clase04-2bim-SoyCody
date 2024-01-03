@@ -17,11 +17,12 @@ public class Ejemplo041 {
         int [][] respuesta = new int [3][3];
         for (int i = 0; i < arreglo1.length; i++) {
             for (int j = 0; j < arreglo2.length; j++) {
+                System.out.printf("%d\t", arreglo1[i][j]);
                 respuesta[i][j] = obtenerMultiplicacion(arreglo1[i][j], 
                 arreglo2[i][j]); 
             }
+            System.out.println("\n");
         }
-        
     }
         
     public static int obtenerMultiplicacion(int a, int b){
