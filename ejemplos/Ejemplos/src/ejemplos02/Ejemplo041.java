@@ -17,20 +17,30 @@ public class Ejemplo041 {
         int [][] respuesta = new int [3][3];
         for (int i = 0; i < arreglo1.length; i++) {
             for (int j = 0; j < arreglo2.length; j++) {
-                System.out.printf("%d\t", arreglo1[i][j]);
                 respuesta[i][j] = obtenerMultiplicacion(arreglo1[i][j], 
-                arreglo2[i][j]); 
+                        arreglo2[i][j]);
             }
-            System.out.println("\n");
         }
+        presentarPantalla(arreglo1);
+        presentarPantalla(arreglo2);
+        presentarPantalla(respuesta);
     }
         
     public static int obtenerMultiplicacion(int a, int b){
         int mult;
         mult = a * b;
-        System.out.printf("%d\t", mult);
         return mult;
     }
     
-    
+    public static void presentarPantalla(int arregloa[][]){
+        String cadena = "";
+        for (int i = 0; i < arregloa.length; i++) {
+            for (int j = 0; j < arregloa[i].length; j++) {
+                cadena = String.format("%s%d\t", cadena, 
+                        arregloa[i][j]);
+            }
+            cadena = String.format("%s\n", cadena);
+        }
+        System.out.println(cadena);
+    }
 }
